@@ -8,7 +8,6 @@ import datetime
 import wikipedia #pip install wikipedia
 import webbrowser
 import os
-import smtplib
 
 
 engine = pyttsx3.init('sapi5')
@@ -33,7 +32,7 @@ def wishMe():
     else:
         speak("Good Evening!")
 
-    speak("I am Pikachu Sir. Please tell me how may I help you")
+    speak("I am Self Made. Please tell me how may I help you")
 
 def takeCommand():
     #It takes microphone input from the user and returns string output
