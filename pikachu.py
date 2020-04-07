@@ -55,13 +55,7 @@ def takeCommand():
         return "None"
     return query
 
-def sendEmail(to, content):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login('divya.14.avasthi@gmail.com', 'Divyanshu@123#')
-    server.sendmail('divya.14.avasthi@gmail.com', to, content)
-    server.close()
+
 
 if __name__ == "__main__":
     wishMe()
@@ -110,13 +104,4 @@ if __name__ == "__main__":
             df = pd.read_excel (Path('C:/Users/Divyanshu/Documents/Train.xlsx'))
             print (df)
             
-        elif 'email' in query:
-            try:
-                speak("What should I say?")
-                content = takeCommand()
-                to = "rkvishalsingh26@gmail.com"
-                sendEmail(to, content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e)
-                speak("Sorry my friend . I am not able to send this email")
+       
